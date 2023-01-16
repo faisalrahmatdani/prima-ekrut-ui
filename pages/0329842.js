@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   UploadOutlined,
   UserOutlined,
@@ -9,10 +9,21 @@ import { Divider, Table } from "antd";
 import { useRouter } from "next/router";
 const { Header, Content, Footer, Sider } = Layout;
 const Dashboard = () => {
+  const [dataApi, setDataApi] = useState(
+    typeof window !== "undefined"
+      ? JSON?.parse(
+          localStorage?.getItem("dataPelamar") !== "undefined"
+            ? localStorage?.getItem("dataPelamar")
+            : null
+        ) || null
+      : null
+  );
   const router = useRouter();
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
+  console.log(dataApi);
 
   const columns = [
     {
@@ -71,6 +82,19 @@ const Dashboard = () => {
       posisi: "staff-admin-umum",
     },
   ];
+  const dataLocal = [
+    {
+      key: "2",
+      name: dataApi?.values?.user?.name,
+      age: dataApi?.values?.user?.age,
+      address: dataApi?.values?.user?.addres,
+      email: dataApi?.values?.user?.email,
+      phone: dataApi?.values?.user?.phone,
+      catatan: dataApi?.values?.user?.introduction,
+      CV: "https://www.dropbox.com/s/ieup78ahcwqf01t/CV%20-%20FaisalRahmatdani.pdf?dl=0",
+      posisi: dataApi?.posisi,
+    },
+  ];
   return (
     <Layout className="min-h-screen">
       <Sider
@@ -109,7 +133,11 @@ const Dashboard = () => {
         >
           <div className="px-[50px]">
             <Divider>Data Pelamar</Divider>
-            <Table columns={columns} dataSource={data} size="middle" />
+            <Table
+              columns={columns}
+              dataSource={dataApi ? dataLocal : data}
+              size="middle"
+            />
           </div>
           <div
             onClick={() => {

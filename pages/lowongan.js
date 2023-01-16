@@ -66,54 +66,6 @@ const Lowongan = () => {
         </div>
         <div className="flex flex-col gap-6 py-8">
           <div className="max-h-fit border border-gray-300 rounded-xl shadow-md p-6">
-            <div className="">
-              <h1 className="text-2xl font-bold text-primary">
-                Back Office Admin & Project Support Officer
-              </h1>
-              <span className="text-sm pt-4 text-lg">1 - 2 Years</span>
-            </div>
-
-            <div className="mt-9">
-              <h1 className="font-bold">Qualification:</h1>
-              <ul className="list-style ml-[55px] mt-5 flex flex-col gap-3">
-                <li>
-                  Bachelor's Degree from any major (Preferably in Accounting /
-                  Office Administration).
-                </li>
-                <li>
-                  Minimum having experience 1 year in the related field (Fresh
-                  graduates are welcome!)
-                </li>
-                <li>Good coordination skills and detail-oriented.</li>
-                <li>Advance in operating Ms. Office, especially Ms. Excel.</li>
-                <li>Good in English both written and oral.</li>
-              </ul>
-            </div>
-
-            <div className="mt-9">
-              <h1 className="font-bold">Job Description:</h1>
-              <ul className="list-style ml-[55px] mt-5 flex flex-col gap-3">
-                <li>
-                  Coordinate with finance and accounting for invoices and tax
-                  invoices.
-                </li>
-                <li>Prepare and manage billing processes.</li>
-                <li>
-                  Support administration for existing and upcoming projects.
-                </li>
-                <li>Maintain project database and document.</li>
-                <li>Make a report about rental and OEM business projects.</li>
-              </ul>
-            </div>
-            <div className="border border-gray-300 w-full my-4"></div>
-            <div className="flex gap-3 justify-end">
-              <button className="bg-primary rounded-[100px] py-3 px-6 text-white hover:bg-greenDark hover:text-gray-300">
-                Lamar sekarang
-              </button>
-            </div>
-          </div>
-
-          <div className="max-h-fit border border-gray-300 rounded-xl shadow-md p-6">
             <div className="flex flex-col gap-2">
               <h1 className="text-2xl font-bold text-primary">
                 Staff Purchasing
@@ -223,6 +175,54 @@ const Lowongan = () => {
                   route.push("/staff-admin-umum");
                 }}
               >
+                Lamar sekarang
+              </button>
+            </div>
+          </div>
+          {/*  */}
+          <div className="max-h-fit border border-gray-300 rounded-xl shadow-md p-6">
+            <div className="">
+              <h1 className="text-2xl font-bold text-primary">
+                Back Office Admin & Project Support Officer
+              </h1>
+              <span className="pt-4 text-lg">1 - 2 Years</span>
+            </div>
+
+            <div className="mt-9">
+              <h1 className="font-bold">Qualification:</h1>
+              <ul className="list-style ml-[55px] mt-5 flex flex-col gap-3">
+                <li>
+                  Bachelor Degree from any major Preferably in Accounting /
+                  Office Administration.
+                </li>
+                <li>
+                  Minimum having experience 1 year in the related field (Fresh
+                  graduates are welcome!)
+                </li>
+                <li>Good coordination skills and detail-oriented.</li>
+                <li>Advance in operating Ms. Office, especially Ms. Excel.</li>
+                <li>Good in English both written and oral.</li>
+              </ul>
+            </div>
+
+            <div className="mt-9">
+              <h1 className="font-bold">Job Description:</h1>
+              <ul className="list-style ml-[55px] mt-5 flex flex-col gap-3">
+                <li>
+                  Coordinate with finance and accounting for invoices and tax
+                  invoices.
+                </li>
+                <li>Prepare and manage billing processes.</li>
+                <li>
+                  Support administration for existing and upcoming projects.
+                </li>
+                <li>Maintain project database and document.</li>
+                <li>Make a report about rental and OEM business projects.</li>
+              </ul>
+            </div>
+            <div className="border border-gray-300 w-full my-4"></div>
+            <div className="flex gap-3 justify-end">
+              <button className="bg-primary rounded-[100px] py-3 px-6 text-white hover:bg-greenDark hover:text-gray-300">
                 Lamar sekarang
               </button>
             </div>

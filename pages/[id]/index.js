@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 const FormInput = () => {
   const [field, setFields] = useState(false);
   const route = useRouter();
+  const { id } = route.query;
 
   const props = {
     action: "//jsonplaceholder.typicode.com/posts/",
@@ -31,6 +32,7 @@ const FormInput = () => {
 
   const onFinish = (values) => {
     console.log(values);
+    localStorage.setItem("dataPelamar", JSON.stringify({ values, posisi: id }));
     setFields(true);
   };
 
