@@ -23,8 +23,6 @@ const Dashboard = () => {
     token: { colorBgContainer },
   } = theme.useToken();
 
-  console.log(dataApi);
-
   const columns = [
     {
       title: "Nama",

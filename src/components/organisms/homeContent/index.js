@@ -1,7 +1,6 @@
 import { Steps } from "antd";
 import Image from "next/image";
-import ilustrasi from "../../../../public/alur-rekrut.png";
-import Button from "../../atoms/Button";
+import ilustrasi from "../../../../public/people.webp";
 import { useRouter } from "next/router";
 
 const HomeContent = () => {
@@ -9,7 +8,7 @@ const HomeContent = () => {
   const Card = ({ description, num }) => {
     return (
       <>
-        <div className="border border-gray-300 rounded-xl w-[360px] h-[360px] p-10">
+        <div className="border border-gray-300 rounded-xl w-[360px] h-[360px] p-10 hover:border-primary hover:border-[5px] hover:shadow-xl transition-all ease">
           <h1 className="text-[32px] text-primary font-bold mb-6">{num}</h1>
           <h1 className="text-[22px] font-thin">{description}</h1>
         </div>
@@ -39,7 +38,7 @@ const HomeContent = () => {
 
       <div className="w-full flex py-8">
         <div className="w-[50%]">
-          <div className="w-full h-full ml-36">
+          <div className="w-full h-full">
             <Image src={ilustrasi} width={600} height={600} alt="ilustrasi" />
           </div>
         </div>
@@ -91,7 +90,7 @@ const HomeContent = () => {
           }}
           className="w-[50%] h-full text-center items-center mt-2"
         >
-          <h1 className="text-white text-2xl font-medium cursor-pointer border border-white px-10 py-2 rounded-[100px] mx-4">
+          <h1 className="text-white text-2xl font-medium cursor-pointer border border-white px-10 py-2 rounded-[100px] mx-4 hover:bg-white hover:text-primary hover:shadow-2xl transition-all ease">
             Lihat Lowongan
           </h1>
         </div>

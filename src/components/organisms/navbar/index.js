@@ -1,18 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../../../public/logo.jpg";
+import logo from "../../../../public/newlogo.png";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
   const route = useRouter();
   const menu = [
     {
-      label: "Home",
+      label: "HOME",
       route: "/",
     },
     {
-      label: "Lowongan",
+      label: "LOWONGAN",
       route: "/lowongan",
+    },
+    {
+      label: "ABOUT US",
+      route: "http://primatourtravel.com/about-us/",
     },
   ];
 
@@ -25,14 +29,14 @@ const Navbar = () => {
           }}
           className="max-h-full py-3 flex items-center cursor-pointer"
         >
-          <Image src={logo} alt="logo" width={80} height={80}></Image>
+          <Image src={logo.src} alt="logo" width={200} height={200}></Image>
         </div>
         <div className="flex gap-8 h-full items-center">
           {menu.map((item) => {
             return (
               <>
                 <a href={item?.route}>
-                  <h1 className="text-xl text-primary font-semibold leading-6 cursor-pointer">
+                  <h1 className="text-base font-semibold leading-6 cursor-pointer hover:text-primary hover:shadow-xl transition-all ease">
                     {item?.label}
                   </h1>
                 </a>
